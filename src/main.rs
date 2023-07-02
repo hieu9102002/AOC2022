@@ -1,11 +1,11 @@
 pub mod question;
 
-use question::question_1::part_1;
-use question::question_1::part_2;
+use question::question_2::part_1;
+use question::question_2::part_2;
 use std::fs;
 
 fn main() {
-    let input = "inputs/input1";
+    let input = "inputs/input2";
 
     let contents = fs::read_to_string(input)
         .expect("Input file does not exist");
