@@ -13,6 +13,7 @@ fn main() {
     let result = part_1(&contents);
     let result2 = part_2(&contents);
 
-    println!("Part 1: {}\nPart 2: {}", result, result2);
+    println!("Part 1: {}", result);
+    println!("Part 2: {}", result2);
 }
 
