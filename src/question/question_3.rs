@@ -23,7 +23,7 @@ pub fn part_2(input: &String) -> String {
 fn get_duplicate_three(input: &[&str]) -> char {
     let uniques:Vec<HashSet<char>> = input
         .iter()
-        .map(|&x| x.chars().map(|c| c).collect())
+        .map(|&x| x.chars().collect())
         .collect();
         
     let charas = uniques
@@ -32,7 +32,7 @@ fn get_duplicate_three(input: &[&str]) -> char {
         .fold(HashMap::new(), |mut acc:HashMap<char, usize>, next| {
             let number = acc.entry(*next).or_insert(0);
             *number += 1;
-            return acc;
+            acc
         });
 
     return *charas.iter().find(|x| x.1 == &3).expect("msg").0
