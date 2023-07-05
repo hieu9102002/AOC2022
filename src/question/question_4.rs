@@ -13,7 +13,7 @@ pub fn part_2(input: &str) -> String {
         .lines()
         .fold(0, |acc, x| {
             let split: Vec<&str> = x.split(',').collect();
-            (acc + if overlap(split[0], split[1]) {1} else {0})
+            acc + if overlap(split[0], split[1]) {1} else {0}
         })
         .to_string()
 }
